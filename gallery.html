@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+  <title>KinnPorscheTheSeries Worldtour Support</title>
+  <link rel="stylesheet" type="text/css" href="style/gallery.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="box">
+    <span style="--i:1;" class="hidden"><img src="images/mercury/mercury-1.jpeg"/></span>
+    <span style="--i:2;" class="hidden"><img src="images/mercury/mercury-2.jpg"/></span>
+    <span style="--i:3;" class="hidden"><img src="images/mercury/mercury-3.jpg"/></span>
+    <span style="--i:4;" class="hidden"><img src="images/mercury/mercury-4.JPG"/></span>
+    <span style="--i:5;" class="hidden"><img src="images/mercury/mercury-5.JPG"/></span>
+    <span style="--i:6;" class="hidden"><img src="images/mercury/mercury-6.JPG"/></span>
+    <span style="--i:7;" class="hidden"><img src="images/mercury/mercury-7.JPG"/></span>
+    <span style="--i:8;" class="center"><img src="images/mercury/mercury-center.jpg"/></span>
+    <span style="--i:9;" class="hidden"><img src="images/mercury/mercury-8.JPG"/></span>
+    <span style="--i:10;" class="hidden"><img src="images/mercury/mercury-9.JPG"/></span>
+    <span style="--i:11;" class="hidden"><img src="images/mercury/mercury-10.JPG"/></span>
+    <span style="--i:12;" class="hidden"><img src="images/mercury/mercury-11.JPG"/></span>
+    <span style="--i:13;" class="hidden"><img src="images/mercury/mercury-12.JPG"/></span>
+    <span style="--i:14;" class="hidden"><img src="images/mercury/mecury-13.JPG"/></span>
+    <span style="--i:15;" class="hidden"><img src="images/mercury/mercury-14.JPG"/></span>
+  </div>
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+  <script>
+    window.addEventListener('load', (event) => {
+      document.querySelector("span.center").style.width = "0%";
+    });
+    const images = document.querySelectorAll('.box span img');
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
+    images.forEach(box => {
+      box.addEventListener('click', function handleClick(event) {
+        modal.style.display = "block";
+        modalImg.src = event.currentTarget.src;
+      });
+    });
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+  </script>
+</body>
+</html>

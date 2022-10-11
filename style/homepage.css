@@ -1,0 +1,245 @@
+body {
+    --def: #96B7C4; 	
+	--inv: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.solar-system {
+  position: relative;
+  min-height: 100vh;
+}
+
+.sun {
+    position: absolute;
+    left: -600px;
+    top: 5%;
+    height: 880px;
+}
+
+.mercury {
+    left: 220px;
+    top: 40%;
+    width: 120px;
+}
+
+.mercury a img
+{
+  width: 120px;
+}
+
+.venus {
+    left: 350px;
+    top: 50%;
+    width: 180px;
+}
+
+.earth {
+    left: 500px;
+    top: 40%;
+    width: 200px;
+}
+
+.moon {
+    left: 650px;
+    top: 36%;
+    width: 40px;
+}
+.planet.moon span, .planet.pluto span {
+    bottom: -50%;
+}
+
+.mars {
+    left: 520px;
+    top: 13%;
+    width: 110px;
+}
+
+.jupiter {
+    left: 750px;
+    top: 50%;
+    width: 230px;
+}
+
+.saturn {
+    left: 800px;
+    top: 10%;
+    width: 400px;
+}
+.planet.saturn span {
+    bottom: 0px;
+}
+
+.uranus {
+    left: 1000px;
+    top: 65%;
+    width: 250px;
+}
+
+.neptune {
+    left: 1180px;
+    top: 35%;
+    width: 200px;
+}
+
+.pluto {
+    left: 1300px;
+    top: 5%;
+    width: 70px;
+}
+
+.planet span {
+    position: absolute;
+    left: 50%;
+    bottom: -15%;
+    font-family: cursive;
+    color: #FFF;
+}
+
+.planet img {
+    width: inherit;
+}
+
+.planet {
+    position: absolute;
+}
+
+.hidden.planet:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0);
+    opacity: 0.8;
+  }
+
+.saturn.hidden.planet:after {
+  height: 80%;
+}
+
+.introduce h1 {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 600%;
+    font-family: monospace;
+}
+
+.introduce .container {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.introduce .container img {
+    position: absolute;
+    width: 33vh;
+}
+
+.introduce .container img.img-2 {
+  left: 30vh;
+}
+
+.introduce .container img.img-1 {
+    top: 25vh;
+  }
+
+
+.introduce .container .description {
+    position: absolute;
+    left: 70vh;
+    top: 10vh;
+    margin: 15px;
+    padding: 20px;
+    background: rgb(245,255,250, 0.6);
+    height: fit-content;
+    line-height: 20px;
+    font-family: monospace;
+}
+
+@media only screen and (max-width: 961px) {
+    .solar-system {
+        overflow-x: scroll;
+    }
+    .introduce .container .description {
+        position: relative;
+        left: 0px;
+        top: 0px;
+    }
+
+    .introduce .container img {
+        position: relative;
+        width: 50%;
+        left: 0 !important;
+        top: 0 !important;
+        border-radius: 30%;
+    }
+
+    .introduce .container {
+        display: initial;
+    }
+
+    .introduce .container .image {
+        display: flex;
+    }
+}
+
+.btn {		
+	position: relative;	
+	padding: 0.6rem;
+	font-size: 1rem;
+	color: var(--inv);
+	text-transform: uppercase;
+	transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);	
+	cursor: pointer;
+	user-select: none;
+}
+
+.btn:before, .btn:after {
+	content: '';
+	position: absolute;	
+	transition: inherit;
+	z-index: -1;
+}
+
+.btn:hover {
+	color: var(--def);
+	transition-delay: .5s;
+}
+
+.btn:hover:before {
+	transition-delay: 0s;
+}
+
+.btn:hover:after {
+	background: var(--inv);
+	transition-delay: .35s;
+}
+
+/* From Left */
+
+.from-left:before, 
+.from-left:after {
+	top: 0;
+	width: 0;
+	height: 100%;
+}
+
+.from-left:before {
+	right: 0;
+	border: 1px solid var(--inv);
+	border-left: 0;
+	border-right: 0;	
+}
+
+.from-left:after {
+	left: 0;
+}
+
+.from-left:hover:before,
+.from-left:hover:after {
+	width: 100%;
+}

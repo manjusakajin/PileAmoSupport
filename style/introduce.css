@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    background-color: black;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+@keyframes fade {
+    0% {
+      opacity: 0;
+      background-size: 100%;
+    }
+    20% {
+      opacity: 1;
+      background-size: 100%;
+    }
+    40% {
+        background-size: 100%;
+    }
+    60% {
+        background-size: 50%;
+    }
+    80% {
+        background-size: 30%;
+    }
+    100% {
+        background-size: 0%;
+    }
+}
+
+.text-content {
+    position: relative;
+    top: 25em;
+}
+.text-content p {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    white-space: normal;
+    overflow: hidden;
+    color: whitesmoke;
+    font-family: Monospace;
+    font-size: 160%;
+}
+
+.text-content h1 {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    white-space: normal;
+    overflow: hidden;
+    transform: translateY(-50%);  
+    color: whitesmoke;
+    line-height: 35px;
+    font-family: 'Dosis', 'Courier New', Courier, monospace; 
+}
+
+.content {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  background-color: black;
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 961px) {   
+    .content {
+      background-image: url("../images/mileapo-hand.jpg");
+    }
+  }
+
+  @media only screen and (min-width: 961px) {
+    .content {
+      background-image: url("../images/mileapo-hand-pc.JPG");
+    }
+  }
+
+/* Animation */
+.anim-typewriter{
+  opacity: 0;
+  line-height: 0px;
+  margin: 0px;
+  }
+  @keyframes typewriter {
+    0% {
+      line-height: 35px;
+      opacity: 0;
+      margin: auto;
+    }
+    100% {
+      line-height: 35px;
+      opacity: 1;
+      margin: auto;
+    }
+  }
+
+  @keyframes hidden {
+    0% {
+      line-height: 35px;
+      opacity: 1;
+      margin: auto;
+    }
+    100% {
+      line-height: 0px;
+      opacity: 0;
+      margin: auto;
+    }
+  }

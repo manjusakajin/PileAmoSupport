@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+  <title>KinnPorscheTheSeries Worldtour Support</title>
+  <link rel="stylesheet" type="text/css" href="style/introduce.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="content"></div>
+    <!-- The video -->
+      <video autoplay muted loop id="myVideo">
+        <source src="images/nebula.mp4" type="video/mp4">
+      </video>
+    <div class="text-content">
+        <h1>MILEAPO COSMOS - THE BIRTH OF PLANETS AND STARS</h1>
+        <p class="anim-typewriter" id="line-1">We were born alone, learnt how to be gradually strong, independent, and honest in the Cosmos. </p>
+        <p class="anim-typewriter" id="line-2">Meanwhile, cyclic cosmology, as the formation of the universe is a loop with an infinite period, the time infinity calculated by singularities. </p>
+        <p class="anim-typewriter" id="line-3">When a cycle ends, another singularity emerges repeatedly. </p>
+        <p class="anim-typewriter" id="line-4">As the destiny, although the probability of two people being far apart meeting without an appointment is 0.00487%, we will certainly get back together. </p>
+        <p class="anim-typewriter" id="line-5">It is worth noting that we come into our lives for all sorts of reasons, colors fade away, 
+          days turn into nights, flowers may die, season changes but we will always be same special person in each other's heart.</p>
+        <p class="anim-typewriter" id="line-6">Cosmos named 'MileApo' that has no beginning, no ending from the destiny moment of knowing each other. </p>
+        <p class="anim-typewriter" id="line-7">It creates super-dense, hot, and energetic singularities. As a result, the planets, and stars magically dissolved and created again. </p> 
+        <p class="anim-typewriter" id="line-8">Let's discover the MileApo cosmos with PileAmo VNFC.</p>
+    </div>
+    <audio id="myAudio">
+      <source src="bg-music.mp3" type="audio/mpeg" />
+    </audio>
+    <script>
+      let index = 1
+      document.getElementById('line-1').style.animation = "typewriter 6s steps(44) 1s 1 normal forwards";
+      document.body.addEventListener("click", function (evt) {
+        if(index == 1) {
+          document.getElementById('myAudio').play();
+        }
+        console.log(index)
+        index = index + 1;
+        if(index <= 8) {
+          document.getElementById('line-'+ (index-1)).style.animation = "hidden 1s steps(44) 1 normal forwards";
+          document.getElementById('line-'+ index).style.animation = "typewriter 3s steps(44) 1s 1 normal forwards";
+        }
+        if(index == 9 ) {
+          const textElement = document.querySelector(".text-content")
+          textElement.style.display = "none"
+          document.getElementById('myVideo').src = ""
+          document.getElementById('myVideo').style.backgroundImage = "url(images/bigbang-small.gif)"
+          document.getElementById('myAudio').src = "bigbang.mp3";
+          document.getElementById('myAudio').play();
+          setTimeout(() => {
+            document.getElementById('myAudio').pause()
+            document.querySelector(".content").style.animation = "fade 10s linear"
+            document.getElementById('myVideo').style.display = "none"
+          }, "5000")
+          setTimeout(() => {
+            location.replace("/homepage.html")
+          }, "13000")
+
+        }
+      });
+    </script>
+</body>
